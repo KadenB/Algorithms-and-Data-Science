@@ -1,0 +1,4 @@
+def One p ?* t;
+def Two p ?* \t | \p ?* t;
+## Couldn't get part 3 to work
+def Four[  \p*  |  pt*  ];

@@ -1,0 +1,10 @@
+read lexc able.lexc  # Read the pre-defined lexicon
+def Lexicon;         # Label this transducer "Lexicon"    
+def rule1 e -> 0 || l _ i;
+def rule2 y-> ie ||  ? _ s ;
+def rule4 V-> 0 || s _ V;
+def rule3 n-> nn ||   _ V;
+def V [ a | e | i | o | u ];
+def rule5 [..] -> e || [x | z | ch | s | s h] _ s;
+def Cleanup "+" -> 0;
+regex Lexicon .o. Cleanup .o. rule1 .o. rule2 .o. rule3 .o. rule4 .o. rule5;
