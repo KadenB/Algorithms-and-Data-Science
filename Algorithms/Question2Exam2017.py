@@ -1,10 +1,6 @@
+# Script made to perform a practice exam for an Algorithms class
 
-# coding: utf-8
-
-# In[1]:
-
-
-
+# Find triple in dataset such that 2 numbers in a datset form a triple of another number in the same datset - some bugs still need working out.
 class FindTriple:
     
     def hash_new(self,imput,seed,shift):
