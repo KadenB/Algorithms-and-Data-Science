@@ -1,4 +1,4 @@
-
+# Script that was created as a homework assignment to implement PCA on a dataset from scratch
 import numpy as np
 import numpy.matlib
 import matplotlib.pyplot as plt
