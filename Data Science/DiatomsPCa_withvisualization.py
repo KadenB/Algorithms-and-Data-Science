@@ -1,5 +1,5 @@
 
-
+# script to plot diatom formation using PCA and visualization
 from __future__ import division
 #get_ipython().magic('matplotlib inline')
 import numpy as np
@@ -85,7 +85,7 @@ first_component()
 
 
 # In[240]:
-
+# Generate the first second and third components and plot them in order to visualize the general diatom shape from millions of rows of data. 
 
 def second_component():
     Sigma = np.cov(diatoms.T)
@@ -163,7 +163,6 @@ third_component()
 
 
 # Ex 4
-
 def knn_projection():
     crop_data_train = np.loadtxt('IDSWeedCropTrain.csv', delimiter= ',')
 
