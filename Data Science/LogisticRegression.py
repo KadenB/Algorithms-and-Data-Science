@@ -1,3 +1,6 @@
+# Script to perform predition on the Iris dataset, using a self implemented version of logistic regression
+
+
 import numpy as np
 import matplotlib as pl
 import numpy.matlib
