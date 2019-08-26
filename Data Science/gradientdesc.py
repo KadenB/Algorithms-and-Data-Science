@@ -1,3 +1,6 @@
+# Implementing gradient descent from scratch to check converstion rates
+
+
 import numpy as np
 import matplotlib as pl
 import numpy.matlib
