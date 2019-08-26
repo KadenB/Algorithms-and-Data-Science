@@ -1,7 +1,5 @@
 
-# coding: utf-8
-
-# In[1]:
+#Script for an Algoirhtms course in which several types of algorithms need to be evaluated and compared
 
 import random
 import time
@@ -38,7 +36,7 @@ sorted(sample_input,key=lambda x: x[0])
 
 
 # In[3]:
-
+# Compare the naive implementation for overlapping time intervals
 def naive(filename):
     sample_input = read_input_fromfile(filename)
     start = min(sample_input,key = lambda x:x[0])[0]
@@ -60,10 +58,10 @@ def naive(filename):
         return 0
 
 
-
+# test the implementation
 naive('input1.in.txt')
 
-
+# Implement a sweep based approach in which endpoints need to be sorted first
 def sort_endpoints(filename):
     set_of_intervals = read_input_fromfile(filename)
     points = []
@@ -77,7 +75,7 @@ def sort_endpoints(filename):
         points.append(interval[1])
     return points, isEndpoint,isStart
     
-
+# Implementation for sweep based interval overlap 
 def sweep(set_of_intervals):
     points,endpoints,startingpoints = sort_endpoints(filename)
     points.sort()
@@ -117,6 +115,8 @@ sample_input1 = [[1,2],[1,6],[2,4],[3,9],[8,9]] # greatest num of overlapping is
 sample_input2 =  [[1,2],[3,4],[6,7],[8,9],[10,11]] # none overlapping
 sample_input3 = [[1,2],[1,6],[2,4],[3,9],[4,9]] # all overalpping
 
+
+# Timer to evaluate performance of implementations
 def experiment_1(input1):
     time_sweep = 0
     time_naive = 0
@@ -157,7 +157,7 @@ import time
 import matplotlib.pyplot as plt
 
 ## Question 2 
-# List sorting eveluation method via recursive and random
+# List sorting eveluation method via recursive and random sort
 #    ####
 
 
@@ -203,7 +203,7 @@ def RandMed(list_to_sort,seed):
         m = int(n/2)
     return recursMed(list_to_sort,m,seed)
 
-
+# Plot the results of the different implementations for sorting.
 
 def simple_experiment(size_of_input,seed):
     # create the same input for testing either sorted or unsorted
@@ -323,7 +323,7 @@ plot_simple([1001,10001,100001,1000001],23)
 
 
 # In[ ]:
-
+# Second vesion of recrusive med
 def recursMed(list_to_sort,m,seed =23,calls=0):
     if seed == None:
         pass
@@ -370,6 +370,7 @@ def SimpleRandMed(list_to_sort):
         m = int(n/2)
     return SimpleRecursiveMed(list_to_sort,m,0)
 
+# Second version where k is fixed
 def SimpleRecursiveMed(list_to_sort,m,calls=0):
     n = len(list_to_sort)
     k = 0
