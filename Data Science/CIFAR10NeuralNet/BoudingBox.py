@@ -168,8 +168,8 @@ pr = BoundingBox()
 #pr.replace_CIFAR(x_train,x_test,"/Users/kadenbehan/Desktop/Cases/Sampleimg")
 
 # replace the training and testing images seperately - this takes sometime so I have already included the pickled versions
-new_train  = pr.replace_CIFAR(x_train,"/Users/kadenbehan/Desktop/Cases/Sampleimg","Train")
-new_test  = pr.replace_CIFAR(x_test,"/Users/kadenbehan/Desktop/Cases/Sampleimg","Test")
+new_train  = pr.replace_CIFAR(x_train,"directory+Sampleimg","Train")
+new_test  = pr.replace_CIFAR(x_test,"directory+Sampleimg","Test")
 
 print(new_train.shape)
 
@@ -190,22 +190,6 @@ pickle.dump(new_train,open( "Cifar_boxed_train.p", "wb" ))
 new_dict = pickle.load(infile)
 
 
-# In[98]:
-
-
-
-
-# In[99]:
-
-
-
-
-# In[ ]:
-
-
-
-
-# In[105]:
 
 imsave("samp.png",img)
 
