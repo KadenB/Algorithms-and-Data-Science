@@ -1,7 +1,4 @@
-
-# coding: utf-8
-
-# In[1]:
+""" This class creats bounding boxes for the CIFAR-10 dataset for feeding it into the neural network CNN2.py"""
 
 import keras
 from keras.datasets import cifar10
