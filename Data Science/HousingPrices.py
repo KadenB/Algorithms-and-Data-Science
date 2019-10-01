@@ -1,7 +1,6 @@
 
-# coding: utf-8
 
-# In[1]:
+""" This script uses the housingdata.csv to experiment with some basic machine learning algorithms and grid search methods"""
 
 get_ipython().magic('matplotlib inline')
 import matplotlib.pyplot as plt
@@ -27,7 +26,7 @@ from sklearn.model_selection import cross_val_score
 ## Read our data and seperate it ###
  
 # change to directory of the housing data
-data = pd.read_csv("/Users/kadenbehan/Desktop/Cases/data/housingprices/housingdata.csv",names= ["CRIM","ZN","INDUS","CHAS","NOX","RM","AGE","DIS","RAD","TAX","PTRATIO","B","LSTAT","Label"])
+data = pd.read_csv("directory name",names= ["CRIM","ZN","INDUS","CHAS","NOX","RM","AGE","DIS","RAD","TAX","PTRATIO","B","LSTAT","Label"])
 
 
 ## Seperate into training and testing
